@@ -1,0 +1,205 @@
+SISTEMA ESCOLA SABER
+Isabela Amabily Krause Bittencourt
+
+INTRODUÇÃO
+A Escola Saber, instituição de Ensino Fundamental, enfrenta dificuldades na organização e no gerenciamento das informações escolares, pois os registros de matrículas e notas são armazenados em arquivos separados. Essa situação pode causar inconsistências nos dados, erros na elaboração dos boletins e dificuldades no acompanhamento do desempenho dos alunos.
+Com esses problemas, o projeto tem como objetivo desenvolver um Sistema de Gestão Escolar que centralize as informações e automatize os processos da instituição, facilitando o trabalho da secretaria, dos professores e da coordenação, além de permitir que os responsáveis acompanhem a vida escolar dos alunos, auxiliando também no desenvolvimento do aluno. Este relatório apresenta os requisitos funcionais, não funcionais e as regras de negócio do sistema, que servirão como base para seu planejamento e desenvolvimento.
+
+FINALIDADE
+A finalidade deste documento é apresentar de forma clara e organizada as funcionalidades que o Sistema de Gestão Escolar da Escola Saber deverá oferecer. O documento busca reunir as necessidades da instituição, considerando as atividades realizadas pela secretaria, professores, coordenação e responsáveis pelos alunos. Por meio da definição dos requisitos funcionais, não funcionais e das regras de negócio, pretende-se evitar dúvidas e interpretações incorretas durante o desenvolvimento do sistema, garantindo que os responsáveis pelo projeto compreendam as necessidades da escola e desenvolvam uma solução adequada para seus problemas.
+
+DEFINIÇÕES E ABREVIAÇÕES
+SGE - Sistema de Gestão Escolar: Sistema responsável pelo gerenciamento das informações acadêmicas.
+RF - Requisito Funcional: Define as funcionalidades que o sistema deve oferecer.
+RNF - Requisito Não Funcional: Define as características de qualidade e desempenho do sistema.
+RN - Regra de Negócio: Estabelece as condições e restrições que devem ser seguidas pelo sistema.
+UML - Linguagem de Modelagem Unificada: Utilizada para representar a estrutura e o funcionamento do sistema por meio de diagramas.
+UC - Caso de Uso: Representa uma funcionalidade do sistema e sua interação com os usuários.
+Backup - Cópia de segurança dos dados para evitar a perda de informações.
+Responsividade - Capacidade da interface de se adaptar a diferentes tamanhos de tela.
+
+USUÁRIOS DO SISTEMA
+Secretaria
+Responsável pelo cadastro de alunos, matrículas, professores, disciplinas e gerenciamento dos registros escolares
+
+Professor
+Responsável pelo registro de atividades, notas e frequência
+
+Coordenação
+Responsável por acompanhar os resultados, o desempenho e a situação escolar dos alunos
+
+Responsável
+Pode consultar notas, frequência e as informações escolares de seus dependentes
+
+
+RESTRIÇÕES
+O SGE da Escola Saber será destinado exclusivamente às pessoas vinculadas à instituição, como secretaria, professores, coordenação e responsáveis pelos alunos. Cada usuário terá acesso apenas às funcionalidades e informações permitidas para seu perfil, garantindo a segurança e a privacidade dos dados escolares.
+
+REQUISITOS FUNCIONAIS
+
+RF-001
+Cadastro de alunos
+Permitir que a secretaria cadastre, consulte e atualize os dados dos alunos
+RF-002
+Gerenciamento de matrículas
+Permitir que a secretaria realize e gerencie as matrículas dos alunos
+RF-003
+Cadastro de professores
+Permitir o cadastro e a atualização dos dados dos professores
+RF-004
+Cadastro de disciplinas
+Permitir cadastrar disciplinas e vinculá-las aos professores e às turmas
+RF-005
+Lançamento de notas
+Permitir que os professores registrem e atualizem as notas dos alunos nas disciplinas em que dão aula
+RF-006
+Registro de frequência
+Permitir que os professores registrem a presença e a ausência dos alunos
+RF-007
+Gerenciamento de atividades
+Permitir que os professores cadastrem e consultem as atividades escolares
+RF-008
+Geração de boletins
+Gerar boletins escolares automaticamente, utilizando as notas registradas pelos professores
+RF-009
+Acompanhamento de resultados
+Permitir que a coordenação consulte as notas, a frequência e o desempenho dos alunos
+RF-010
+Consulta pelos responsáveis
+Permitir que os responsáveis consultem as informações escolares dos alunos vinculados a eles
+RF-011
+Autenticação de usuários
+Permitir que os usuários acessem suas contas por meio de login e senha
+RF-012
+Controle de permissões
+Disponibilizar diferentes funcionalidades conforme o perfil de cada usuário
+RF-013
+Registrar Frequência
+Permitir que os professores registrem a presença e a ausência dos alunos
+RF-014
+Consultar Notas
+Permitir os responsáveis consultem as notas registradas 
+RF-015
+Manter Atividades 
+Permitir que os professores cadastrem, alterem e consultem atividades escolares 
+RF-016
+Calcular Médias 
+Calcular automaticamente as médias dos alunos com base nas notas lançadas 
+RF-017
+Consultar Frequência 
+Permitir que os responsáveis consultem a frequência dos alunos vinculados a eles 
+RF-018
+Vincular Responsáveis 
+Permitir que a secretaria cadastre e vincule responsáveis aos alunos 
+RF-019
+Consultar Desempenho 
+Permitir que a coordenação acompanhe o desempenho dos alunos por turma e disciplina 
+RF-020
+Consultar Histórico Escolar 
+Permitir a consulta do histórico de notas e frequência dos alunos em anos letivos anteriores 
+RF-021
+Gerenciar Ano Letivo 
+Permitir o cadastro e o gerenciamento dos anos letivos e períodos de avaliação 
+RF-022
+Consultar Matrículas 
+Permitir que a secretaria consulte a situação das matrículas dos alunos 
+RF-023
+Gerar matrícula única 
+Gerar um código de matrícula exclusivo e inalterável para cada aluno cadastrado
+RF-024
+Associar professor à disciplina 
+Permitir vincular cada disciplina a um professor responsável
+RF-025
+Validar carga horária 
+Permitir apenas o cadastro de disciplinas com carga horária inteira e superior a zero 
+
+
+
+REQUISITOS NÃO FUNCIONAIS
+
+RNF-001
+Usabilidade
+Deverá apresentar uma interface simples, organizada e de fácil utilização 
+RNF-002
+Segurança
+Deverá proteger os dados pessoais e escolares, impedindo o acesso de pessoas não autorizadas 
+RNF-003
+Desempenho
+Deverá realizar consultas e operações comuns em até 3 segundos, em condições normais de uso 
+RNF-004
+Disponibilidade
+Deverá estar disponível durante o período de funcionamento da escola e, preferencialmente, fora do horário escolar para consultas dos responsáveis 
+RNF-005
+Compatibilidade
+Deverá funcionar nos principais navegadores, como Google Chrome, Microsoft Edge e Mozilla Firefox 
+RNF-006
+Integridade
+Deverá garantir que as informações sejam armazenadas corretamente, evitando registros duplicados ou inconsistentes 
+RNF-007
+Backup
+Deverá realizar cópias de segurança dos dados diariamente para evitar a perda de informações 
+RNF-008
+Responsividade
+Deverá se adaptar a diferentes tamanhos de tela, permitindo o acesso por computadores, tablets e celulares 
+RNF-009
+Precisão das notas 
+O sistema deverá armazenar as notas com duas casas decimais, utilizando DECIMAL(4,2)
+RNF-010
+Consulta de boletins 
+O sistema deverá realizar a consulta dos boletins escolares em menos de 1 segundo
+
+
+
+REGRAS DE NEGÓCIO
+
+RN-001
+Matrícula obrigatória 
+Um aluno somente poderá receber avaliações, notas e registros de frequência se possuir matrícula ativa na turma correspondente. 
+RN-002
+Lançamento de notas 
+Somente professores vinculados à disciplina e à turma poderão registrar ou alterar as notas dos respectivos alunos. 
+RN-003
+Validação das notas 
+As notas das avaliações deverão estar dentro do intervalo de 0,0 a 10,0, não sendo permitidos valores inferiores ou superiores a esse limite. 
+RN-004
+Cálculo de médias 
+A média do aluno deverá ser calculada automaticamente conforme os critérios de avaliação definidos pela escola. 
+RN-005
+Geração de boletins 
+Os boletins deverão ser gerados utilizando as notas registradas no sistema, evitando a necessidade de digitação manual. 
+RN-006
+Registro de frequência 
+A frequência deverá ser registrada apenas para alunos matriculados na turma. 
+RN-007
+Acesso dos responsáveis 
+Cada responsável poderá visualizar somente os dados dos alunos vinculados ao seu cadastro. 
+RN-008
+Permissões da secretaria 
+A secretaria poderá gerenciar cadastros e matrículas, mas não poderá alterar notas lançadas pelos professores. 
+RN-009
+Acompanhamento da coordenação 
+A coordenação poderá consultar os resultados dos alunos e acompanhar seu desempenho escolar. 
+RN-010
+Prevenção de matrículas duplicadas 
+O sistema não deverá permitir que um aluno possua duas matrículas ativas na mesma turma e no mesmo ano letivo. 
+RN-011
+Alteração de notas 
+As alterações de notas deverão registrar o professor responsável e a data da modificação. 
+RN-012
+Associação de disciplinas 
+Uma disciplina deverá estar vinculada a uma turma para que sejam registrados notas, atividades e frequência. 
+RN-013
+Matrícula única do aluno 
+Cada aluno deverá possuir um código de matrícula único e inalterável, gerado no momento do cadastro. 
+RN-014
+Atribuição de professores 
+Toda disciplina ministrada deverá possuir obrigatoriamente um professor responsável vinculado a ela. 
+RN-015
+Validação da carga horária 
+A carga horária das disciplinas deverá ser informada em horas inteiras e com valor superior a zero. 
+
+CONSIDERAÇÕES FINAIS
+Este documento apresentou os requisitos funcionais, não funcionais e as regras de negócio do Sistema de Gestão Escolar da Escola Saber, definindo as principais funcionalidades e condições necessárias para seu desenvolvimento. Por meio dessa documentação e dos diagramas UML, foi possível organizar as necessidades da instituição e estabelecer uma base para a criação do sistema. Espera-se que o sistema contribua para a organização das informações escolares, facilitando o trabalho dos funcionários, reduzindo erros nos registros e permitindo um acompanhamento mais eficiente do desempenho dos alunos.
+
+
+
